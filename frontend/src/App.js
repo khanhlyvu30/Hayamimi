@@ -3,7 +3,8 @@ import './App.css';
 import Login from './component/Authenticate/Login.js';
 import Register from './component/Authenticate/Register.js';
 import DummyHome from './component/Home/DummyHome.js';
-import FirebaseController from './firebase.js'
+import FirebaseController from './firebase.js';
+import Home from './home/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/login" render={() => <Login isLoggedIn={isLoggedIn} login={handleLoggedIn} />} />
         <Route exact path="/register" render={() => <Register isLoggedIn={isLoggedIn} />} />
         <Route exact path="/" render={() => <DummyHome isLoggedIn={isLoggedIn} />} />
+        <Route exact path="/Home" render={() => <Home isLoggedIn={isLoggedIn} />} />
       </Switch>
     </Router>
   );
